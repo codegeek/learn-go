@@ -5,13 +5,23 @@ import (
 	"time"
 )
 
+const (
+	secondHandLength = 90
+	clockCenterX     = 150
+	clockCenterY     = 150
+)
+
 type Point struct {
 	X float64
 	Y float64
 }
 
 func SecondHand(t time.Time) Point {
-	return Point{150, 60}
+	p := secondHandPoint(t)
+	p = Point{p.X * secondHandLength, p.Y * secondHandLength} // scale
+	p = Point{p.X, -p.Y}                                      // flip
+	p = Point{p.X + clockCenterX, p.Y + clockCenterY}         // translate
+	return p
 }
 
 func secondsInRadians(t time.Time) float64 {
