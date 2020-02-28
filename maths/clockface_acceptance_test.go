@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/CodeGeek/learn-go/maths"
+	"github.com/codegeek/learn-go/maths"
 )
 
 type SVG struct {

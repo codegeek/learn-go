@@ -4,7 +4,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/CodeGeek/learn-go/maths"
+	"github.com/codegeek/learn-go/maths"
 )
 
 func main() {
